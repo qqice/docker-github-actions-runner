@@ -28,5 +28,11 @@ RUN apt-get install -y libxkbfile-dev libsecret-1-dev
 # install nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
+# install arduino ide build dependencies
+RUN apt-get install -y libxkbfile-dev libsecret-1-dev
+
+# install nvm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["./bin/Runner.Listener", "run", "--startuptype", "service"]
