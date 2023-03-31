@@ -166,6 +166,10 @@ if [[ ${_DISABLE_AUTOMATIC_DEREGISTRATION} == "false" ]]; then
   trap deregister_runner SIGINT SIGQUIT SIGTERM INT TERM QUIT
 fi
 
+. $HOME/.nvm/nvm.sh
+nvm install 14.0.0
+npm install --global yarn
+
 # Container's command (CMD) execution as runner user
 
 
