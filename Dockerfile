@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM myoung34/github-runner-base:latest
+FROM myoung34/github-runner-base:ubuntu-bionic
 LABEL maintainer="myoung34@my.apsu.edu"
 
 ENV AGENT_TOOLSDIRECTORY=/opt/hostedtoolcache
@@ -7,7 +7,7 @@ RUN mkdir -p /opt/hostedtoolcache
 
 ARG GH_RUNNER_VERSION="2.303.0"
 
-ARG TARGETPLATFORM
+ARG TARGETPLATFORM="linux/arm64"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
